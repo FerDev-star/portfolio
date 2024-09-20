@@ -63,10 +63,11 @@ header nav ul li a:hover {
 header label { display: none; }
 
 header label .bars {
-    width: 30px;
+    width: 40px;
     height: 5px;
     background-color: var(--white);
     border-radius: 25px;
+    transition: .5s;
 }
 
 header label .bars:nth-child(2) { margin: 5px 0; }
@@ -75,12 +76,23 @@ header #toggle_menu:checked ~ nav ul {
     right: 0;
 }
 
+header #toggle_menu:checked ~ nav label .bars:nth-child(2) {
+    display: none;
+}
+header #toggle_menu:checked ~ nav label .bars:nth-child(1) {
+    transform: rotate(-135deg) translateY(-4px);
+}
+header #toggle_menu:checked ~ nav label .bars:nth-child(3) {
+    transform: rotate(135deg) translateY(4px);
+}
+
 .whatsapp img { 
     width: 30px;
     position: fixed;
     bottom: 30px;
     right: 30px;
     animation: big 1s infinite alternate-reverse;
+    z-index: 999;
 }
 
 @keyframes big {

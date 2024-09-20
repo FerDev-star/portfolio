@@ -114,7 +114,7 @@ section {
     overflow: hidden;
 }
 
-.bar_container .bar_animation {
+.bar_container .bar_animation {         
     display: flex;
     justify-content: space-around;
     gap: 40px;
@@ -174,8 +174,16 @@ section article a {
     transition: all .3s;
 }
 
-section article a:hover {
-    border-bottom: 1px solid var(--white);
+.btn_btn:hover { 
+    border-left: 1px solid var(--white); 
+    border-right: 1px solid var(--white); 
+}
+
+.btn_btn { 
+    transition: .3s;
+    border-bottom: 1px solid var(--white); 
+    border-left: 1px solid #00000000; 
+    border-right: 1px solid #00000000; 
 }
 
 /* achivements section styles */

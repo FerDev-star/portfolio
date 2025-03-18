@@ -58,6 +58,12 @@ const translations = {
             "< I Love Laravel />", 
             "< I Love Wordpress />"
         ],
+        btnForm: "Send Message",
+        switcherTitle1 : "Style Switcher",
+        switcherTitle2 : "Body Skin",
+        bodyItem1 : "Light",
+        bodyItem2 : "Dark",
+        switcherTitle3 : "Language",
     },
     es: {
         menuItem1: "Inicio",
@@ -118,10 +124,22 @@ const translations = {
             "< Me encanta Laravel />", 
             "< Me encanta Wordpress />"
         ],
+        btnForm: "Envía un mensaje",
+        switcherTitle1: "Selector de Estilo",
+        switcherTitle2: "Apariencia",
+        bodyItem1: "Claro",
+        bodyItem2: "Oscuro",
+        switcherTitle3: "Idioma",
     }
 };
 
+const placeholder = {
+    en: [ "Name*", "Email*", "Subject*", "Your Message..." ],
+    es : [ "Nombre*", "Correo Electrónico*", "Asunto*", "Tu Mensaje..." ],
+}
+
 const link = document.getElementById("resumeLink");
+const formControl = document.querySelectorAll(".form-control");
 
 function changeLanguage(lang) {
     // Cambiar el idioma en los elementos de la página
@@ -143,12 +161,19 @@ function changeLanguage(lang) {
             // Usamos innerHTML para insertar el texto traducido con etiquetas HTML
             element.innerHTML += translatedText;  // Agrega el contenido traducido con HTML
         }
+        for (let index = 0; index < formControl.length; index++) {
+            formControl[index].placeholder = placeholder[lang][index]
+        }
     });
 
     if (lang === "en") {
-        link.href = "./resume/Fernando-Mora-EN.pdf"
+
+        link.href = "./resume/Fernando-Mora-EN.pdf";
+    
     } else {
-        link.href = "./resume/Fernando-Mora-ES.pdf"
+
+        link.href = "./resume/Fernando-Mora-ES.pdf";
+    
     }
 
     const typedElementContainer = document.querySelector('.container_itype');
@@ -177,6 +202,8 @@ function changeLanguage(lang) {
             cursor: "|",  // Especifica el cursor si lo necesitas
         });
     }, 50);
+
+
 
 }
 

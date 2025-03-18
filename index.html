@@ -320,7 +320,7 @@
           </div>
           <div class="row">
             <!-- Blog Item -->
-            <a href="#" title="links avaibles soon">
+            <a href="https://dev.sierpemangrovetour.com/en/" title="links avaibles soon">
             <div class="blog-item padd-15">
               <div class="blog-item-inner shadow-dark">
                 <div class="blog-img">
@@ -444,7 +444,7 @@
               </div>
               <div class="row">
                 <div class="col-12 padd-15">
-                  <button type="submit" class="btn">Send Message</button>
+                  <button type="submit" class="btn" data-translate="btnForm">Send Message</button>
                 </div>
               </div>
             </form>
@@ -481,7 +481,7 @@
     <div class="toggle-style-switcher">
       <i class="fa fa-cog fa-spin"></i>
     </div>
-    <h5>Style Switcher</h5>
+    <h5 data-translate="switcherTitle1">Style Switcher</h5>
     <ul>
       <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;"
           onclick="setActiveStyle('pink')"></a></li>
@@ -495,22 +495,26 @@
           onclick="setActiveStyle('green')"></a></li>
     </ul>
 
-    <h5>Body Skin</h5>
-    <label>
-      <input type="radio" class="body-skin" name="body-skin" value="light"> Light
+    <h5 data-translate="switcherTitle2">Body Skin</h5>
+    <label data-translate="bodyItem1">
+      Light
     </label>
-    <label>
-      <input type="radio" class="body-skin" name="body-skin" value="dark" checked="true"> Dark
+    <input type="radio" class="body-skin" name="body-skin" value="light" > 
+    <label data-translate="bodyItem2">
+      Dark
     </label>
+    <input type="radio" class="body-skin" name="body-skin" value="dark" checked="true" > 
 
-    <h5>Language</h5>
+    <h5 data-translate="switcherTitle3">Language</h5>
     <!-- Radio buttons for language selection -->
     <label>
-      <input type="radio" class="language-switcher" name="language" value="en" checked> EN
+      EN
     </label>
+      <input type="radio" class="language-switcher" name="language" value="en" checked> 
     <label>
-      <input type="radio" class="language-switcher" name="language" value="es"> ES
+      ES
     </label>
+      <input type="radio" class="language-switcher" name="language" value="es"> 
   </div>
 
   <!-- Live Style Switcher End -->
